@@ -4,7 +4,7 @@ Compile native executables for iOS using GraalVM's native-image
 # Setup
 You need to have brew installed: https://brew.sh
 * Download `graalvm-ce-java11-darwin-amd64-20.2.0-dev.tar.gz`, the developer version of graalvm's SDK, from https://github.com/graalvm/graalvm-ce-dev-builds/releases
- >`tar -C /usr/local/opt/ -xvf /path/to/graalvm-ce-java11-darwin-amd64-20.2.0-dev.tar.gz`
+   >`tar -C /usr/local/opt/ -xvf /path/to/graalvm-ce-java11-darwin-amd64-20.2.0-dev.tar.gz`
 
 * Install libimobiledevice, native iOS libraries: <br />
    >`brew install --HEAD libimobiledevice`
@@ -15,7 +15,7 @@ You need to have brew installed: https://brew.sh
 * `git clone https://github.com/m3hdi652/java-ios.git && cd java-ios/HelloJava`
 * Using Maven:<br />
     >`mvn client:build`
-* If the compilation is successful, the `HelloJava` will appear in **dist** folder
+* If the compilation is successful, `HelloJava` will appear in **dist** folder
 * You can fake-sign the binary by using ldid: <br />
     >`brew install ldid` <br />
     >`ldid -S HelloJava`
@@ -25,11 +25,13 @@ You need to have brew installed: https://brew.sh
     > e.g: <br />
 
     >>1) 2CD708151B6469F3D4B0F05F48338B81F1809C82 "Apple Development: example@example.com (5J8I29WF1D)" <br />
-        >> 1 valid identities found <br />
+        1 valid identities found <br />
     
     >>`codesign -fs "Apple Development: example@example.com (5J8I29WF1D)" /path/to/binary`
 
 # Credits/Sources
+Read LICENSE
+
 https://github.com/graalvm/graalvm-ce-dev-builds <br />
 https://github.com/gluonhq <br />
 https://github.com/gluonhq/client-samples <br />
