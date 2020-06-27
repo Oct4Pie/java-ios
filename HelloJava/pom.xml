@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>java_ios</groupId>
+    <artifactId>helloJava</artifactId>
+    <version>HELLOJAVA-1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>helloJava</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <client.plugin.version>0.1.27</client.plugin.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.gluonhq</groupId>
+                <artifactId>client-maven-plugin</artifactId>
+                <version>${client.plugin.version}</version>
+                <configuration>
+                    <target>ios</target>
+                    <mainClass>java_ios.HelloJava</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>modified-gluon-releases</id>
+            <url>https://m3hdi652.github.io/java-ios-dependencies/gluon/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
