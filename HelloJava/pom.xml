@@ -33,7 +33,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>modified-gluon-releases</id>
-            <url>https://m3hdi652.github.io/java-ios-dependencies/gluon/</url>
+            <url>https://oct4pie.github.io/java-ios-dependencies/gluon/</url>
         </pluginRepository>
     </pluginRepositories>
 </project>
